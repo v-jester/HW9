@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+<div id="checkboxes">
+  <input type="checkbox" id="check1">
+  <label for="check1">Checkbox 1</label><br>
+  <input type="checkbox" id="check2">
+  <label for="check2">Checkbox 2</label><br>
+  <input type="checkbox" id="check3">
+  <label for="check3">Checkbox 3</label><br>
+  <input type="checkbox" id="check4">
+  <label for="check4">Checkbox 4</label><br>
+  <input type="checkbox" id="check5">
+  <label for="check5">Checkbox 5</label><br>
+  <input type="checkbox" id="check6">
+  <label for="check6">Checkbox 6</label>
+</div>
+
+<script>
+$(document).ready(function() {
+  $('#checkboxes input:checkbox').change(function() {
+    let checkedCount = $('#checkboxes input:checkbox:checked').length;
+    if (checkedCount >= 3) {
+      $('#checkboxes input:checkbox').prop('disabled', true);
+    }
+  });
+});
+</script>
+
+</body>
+</html>
